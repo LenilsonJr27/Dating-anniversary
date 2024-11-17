@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <title>Victor e Raiany</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #05053e;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .carousel-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        .carousel {
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+        }
+
+        .carousel-slide img {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Legenda fixa */
+        .carousel-caption {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        .carousel-caption h1 {
+            font-size: 1.8rem;
+            color: #e63946;
+        }
+
+        .carousel-caption p {
+            margin-top: 10px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Navegação */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        .carousel-btn.left {
+            left: 10px;
+        }
+
+        .carousel-btn.right {
+            right: 10px;
+        }
+
+        /* Pontos */
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .carousel-dot.active {
+            opacity: 1;
+            background-color: #000;
+        }
+
+        /* Contador */
+        .data {
+            margin-top: 20px;
+            background-color: #000;
+            height: 80px;
+            padding-top: 10px;
+            border-radius: 7px;
+            box-shadow: 1px 0.5px 12px #e63946;
+        }
+        h1{
+            font-family:"Courgette", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .data h2 {
+            font-size: 1.5rem;
+        }
+
+        .data h3 {
+            font-size: 1.1rem;
+            margin-top: 5px;
+            color: #a8dadc;
+            text-transform: uppercase;
+        }
+        .carousel-slide video {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .audio{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <!-- Carrossel -->
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="victor4.jpg" alt="Imagem 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="victor3.jpg" alt="Imagem 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="victor1.jpg" alt="Imagem 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="victor2.jpg" alt="Imagem 4">
+                </div>
+                <div class="carousel-slide">
+                    <video controls autoplay muted>
+                        <source src="victor_v2.mp4" type="video/mp4"/>
+                      </video>
+                </div>
+                <div class="carousel-slide">
+                    <video controls autoplay muted>
+                        <source src="victor_v.mp4" type="video/mp4"/>
+                      </video>
+                </div>
+                <div class="carousel-slide">
+                    <video controls autoplay muted>
+                        <source src="victor_v3.mp4" type="video/mp4"/>
+                      </video>
+                </div>
+            </div>
+            <!-- Botões de navegação -->
+            <button class="carousel-btn left">‹</button>
+            <button class="carousel-btn right">›</button>
+
+            <!-- Pontos -->
+            <div class="carousel-dots">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+            </div>
+        </div>
+        <div class="carousel-caption">
+            <h1>Victor e Raiany</h1>
+            <p>Mais um mês da nossa história sendo escrita, em que tenho uma mulher maravilhosa ao meu lado, carinhosa, companheira, uma pessoa com quem posso contar para tudo e que me tem completamente. Amo amar você, amo ser seu namorado e estar a cada segundo com você. Me sinto mal quando não consigo um tempinho livre para te ver, mas sempre que der estarei junto. Te amo, minha princesa ❤️</p>
+        </div>
+
+        <!-- Contador -->
+        <div><br>
+            <h2>Juntos há:</h2>
+            <div class="data">
+                <h2 id="years">0</h2>
+                <h3>anos</h3>
+            </div>
+            <div class="data">
+                <h2 id="days">0</h2>
+                <h3>dias</h3>
+            </div>
+            <div class="data">
+                <h2 id="hours">0</h2>
+                <h3>horas</h3>
+            </div>
+            <div class="data">
+                <h2 id="minutes">0</h2>
+                <h3>minutos</h3>
+            </div>
+        </div>
+        <div class="audio">
+            <audio autoplay="autoplay" controls="controls">
+                <source src="Gustavo Mioto - Contramão.mp3" type="audio/mp3" />
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-btn.right');
+        const prevButton = document.querySelector('.carousel-btn.left');
+        const dotsNav = document.querySelector('.carousel-dots');
+        const dots = Array.from(dotsNav.children);
+
+        let currentSlideIndex = 0;
+
+        const updateSlidePosition = () => {
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlideIndex].classList.add('active');
+        };
+
+        nextButton.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlideIndex = index;
+                updateSlidePosition();
+            });
+        });
+
+        function calculateDateDifference(startDate) {
+            const now = new Date(); // Data atual
+            const start = new Date(startDate); // Data inicial
+
+            // Diferença total em milissegundos
+            const diff = now - start;
+
+            // Cálculo em unidades específicas
+            const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365)); // Milissegundos para anos
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 365; // Milissegundos para dias (resto dos anos)
+            const hours = Math.floor(diff / (1000 * 60 * 60)) % 24; // Milissegundos para horas
+            const minutes = Math.floor(diff / (1000 * 60)) % 60; // Milissegundos para minutos
+
+            // Atualizar elementos no HTML
+            document.getElementById('years').textContent = years;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+        }
+
+        // Chamando a função com a data inicial
+        calculateDateDifference('2024-07-18'); // Substitua pela data de início (formato AAAA-MM-DD)
+    </script>
+</body>
+</html>
